@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class InventarioVista {
 
-    private Scanner sc = new Scanner(System.in);
+    private Scanner leer = new Scanner(System.in);
 
     public int mostrarMenu() {
         System.out.println("\n--- MENÚ DE INVENTARIO ---");
@@ -16,26 +16,26 @@ public class InventarioVista {
         System.out.println("4. Eliminar producto");
         System.out.println("5. Salir");
         System.out.print("Seleccione una opción: ");
-        return sc.nextInt();
+        return leer.nextInt();
     }
 
     public Producto pedirDatosUsuario() {
-        sc.nextLine(); // limpiar buffer
+        leer.nextLine(); // limpiar buffer
         System.out.print("Nombre: ");
-        String nombre = sc.nextLine();
+        String nombre = leer.nextLine();
         System.out.print("SKU: ");
-        String sku = sc.nextLine();
+        String sku = leer.nextLine();
         System.out.print("Cantidad: ");
-        int cantidad = sc.nextInt();
+        int cantidad = leer.nextInt();
         System.out.print("Precio: ");
-        double precio = sc.nextDouble();
+        double precio = leer.nextDouble();
         return new Producto(nombre, sku, cantidad, precio);
     }
 
     public String pedirSku() {
-        sc.nextLine(); // limpiar buffer
+        leer.nextLine(); // limpiar buffer
         System.out.print("Ingrese el SKU: ");
-        return sc.nextLine();
+        return leer.nextLine();
     }
 
     public void mostrarProducto(Producto producto) {

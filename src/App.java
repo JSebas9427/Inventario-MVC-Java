@@ -8,5 +8,6 @@ public class App {
         InventarioVista vista = new InventarioVista();
         ControladorInventario controlador = new ControladorInventario(bd, vista);
         controlador.iniciar();
+        System.out.println("Aplicación de Inventario Iniciada");
     }
 }
